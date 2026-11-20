@@ -1,0 +1,7 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Compiling ../../../../../tb.cpp in debug mode
+   Compiling ../../../fenwick.cpp in debug mode
+   Generating csim.exe
+RESULT variant=0 ops=100000 queries=43032 mismatches=0
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

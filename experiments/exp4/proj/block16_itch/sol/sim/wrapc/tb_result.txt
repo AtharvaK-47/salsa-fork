@@ -1,0 +1,1 @@
+variant=2 ops=100000 queries=50000 mismatches=0

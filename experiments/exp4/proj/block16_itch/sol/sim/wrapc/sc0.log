@@ -1,0 +1,6 @@
+   Build using "C:/AMDDesignTools/2026.1/Vitis/win64/tools/clang-16/bin/clang++"
+   Compiling apatb_fenwick_top.cpp
+   Compiling fenwick.cpp_pre.cpp
+   Compiling tb.cpp_pre.cpp
+   Compiling apatb_fenwick_top_ir.ll
+   Generating cosim.tv.exe

@@ -1,0 +1,39 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/gitrepos/salsa-fork/experiments/exp4/run_hls.tcl:56:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="fenwick_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=fenwick_top" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="fenwick.cpp:7:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fenwick_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=tree type=cyclic factor=16 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="fenwick.cpp:17:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fenwick_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="fenwick.cpp:18:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fenwick_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=100000" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="fenwick.cpp:25:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fenwick_top" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="fenwick.cpp:35:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fenwick_top" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="fenwick.cpp:34:13" msg_body="Loop 'down' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="down"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="fenwick.cpp:24:13" msg_body="Loop 'up' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="up"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fenwick.cpp:4:0" msg_body="Unrolling loop 'down' (fenwick.cpp:34:13) in function 'fenwick_top' completely with a factor of 17">
+        <args Factor="17" LoopLoc="fenwick.cpp:34:13" LoopName="down"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fenwick.cpp:4:0" msg_body="Unrolling loop 'up' (fenwick.cpp:24:13) in function 'fenwick_top' completely with a factor of 17">
+        <args Factor="17" LoopLoc="fenwick.cpp:24:13" LoopName="up"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="fenwick.cpp:5:0" msg_body="Applying array_partition to '_ZZ11fenwick_topPKtPKhPKiPiiE4tree': Cyclic partitioning with factor 16 on dimension 1.">
+        <args Dim="1" Factor="16" Mode="Cyclic" UOName="_ZZ11fenwick_topPKtPKhPKiPiiE4tree"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="fenwick.cpp:7:1" msg_body="array_partition dim=1 type=cyclic factor=16 variable=fenwick_top(unsigned short const*, unsigned char const*, int const*, int*, int)::tree false fenwick_top fenwick.cpp:7:1 fenwick_top(unsigned short const*, unsigned char const*, int const*, int*, int)::tree fenwick.cpp:5:0">
+        <args PragmaFunction="fenwick_top" PragmaIsAuto="false" PragmaOptions="dim=1 type=cyclic factor=16 variable=fenwick_top(unsigned short const*, unsigned char const*, int const*, int*, int)::tree" PragmaSrcLoc="fenwick.cpp:7:1" PragmaSrcLoc-DebugLoc="File fenwick.cpp Line 7 Column 1" PragmaType="array_partition" VarLoc="fenwick.cpp:5:0" VarName="fenwick_top(unsigned short const*, unsigned char const*, int const*, int*, int)::tree"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-358" msg_severity="WARNING" msg_loc="fenwick.cpp:19:22" msg_body="Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations."/>
+</xilinx:hls_fe_msgs>

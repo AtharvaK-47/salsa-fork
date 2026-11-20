@@ -20,13 +20,11 @@ module salsa_segment_pull_top #(
     output logic [1:0][B-1:0]                       iss_ren,
     output logic [1:0][B-1:0]                       iss_wen,
     output logic [1:0][B-1:0][K-1:0]                iss_addr,
-    output logic [1:0][B-1:0][$clog2(W+1)-1:0]      iss_lvl,
     output logic [DW-1:0]                           iss_data
 );
     localparam int unsigned BW = $clog2(B);
     localparam int unsigned HW = W - K;
     localparam int unsigned NL = W + 1;
-    localparam int unsigned LW = $clog2(NL);
     localparam int unsigned N  = 1 << W;
 
 `ifndef SYNTHESIS
@@ -89,19 +87,29 @@ module salsa_segment_pull_top #(
 
     logic [1:0][B-1:0]          x_ren, x_wen;
     logic [1:0][B-1:0][K-1:0]   x_addr;
-    logic [1:0][B-1:0][LW-1:0]  x_lvl;
     always_comb begin
-        x_ren = '0; x_wen = '0; x_addr = '0; x_lvl = '0;
+        x_ren = '0; x_wen = '0; x_addr = '0;
         for (int unsigned p = 0; p < 2; p++)
             for (int unsigned b = 0; b < B; b++)
                 for (int unsigned L = HW; L < NL; L++)
-                    if (t_cval[L][p] && bank_of(t_cand[L][p], L) == BW'(b)) begin
-                        x_ren [p][b] = !(tu && t_isp[L][p]);
-                        x_wen [p][b] =   tu && t_isp[L][p];
-                        x_addr[p][b] = addr_of(t_cand[L][p], L);
-                        x_lvl [p][b] = LW'(L);
+                    if (rst_n && q_valid && c_cval[L][p] && bank_of(c_cand[L][p], L) == BW'(b)) begin
+                        x_ren [p][b] = !(q_is_update && c_isp[L][p]);
+                        x_wen [p][b] =   q_is_update && c_isp[L][p];
+                        x_addr[p][b] = addr_of(c_cand[L][p], L);
                     end
     end
+
+`ifndef SYNTHESIS
+    always_ff @(posedge clk)
+        for (int unsigned p = 0; p < 2; p++)
+            for (int unsigned b = 0; b < B; b++) begin
+                int hits;
+                hits = 0;
+                for (int unsigned L = HW; L < NL; L++)
+                    if (t_cval[L][p] && bank_of(t_cand[L][p], L) == BW'(b)) hits++;
+                assert (hits <= 1) else $error("half-bank %0d/%0d owns %0d nodes", p, b, hits);
+            end
+`endif
 
     assign iss_valid  = tv;
     assign iss_update = tu;
@@ -111,7 +119,6 @@ module salsa_segment_pull_top #(
     assign iss_ren    = x_ren;
     assign iss_wen    = x_wen;
     assign iss_addr   = x_addr;
-    assign iss_lvl    = x_lvl;
     assign iss_data   = t_d;
 endmodule
 

@@ -1,0 +1,936 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 21-jul-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Fri Nov 20 22:24:42 2026
+# Process ID         : 19056
+# Current directory  : C:/Vitis_Proj/segment_1/segment_1.runs/segment_bd_salsa_0_0_synth_1
+# Command line       : vivado.exe -log segment_bd_salsa_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source segment_bd_salsa_0_0.tcl
+# Log file           : C:/Vitis_Proj/segment_1/segment_1.runs/segment_bd_salsa_0_0_synth_1/segment_bd_salsa_0_0.vds
+# Journal file       : C:/Vitis_Proj/segment_1/segment_1.runs/segment_bd_salsa_0_0_synth_1\vivado.jou
+# Running On         : Asus
+# Platform           : Windows 11
+# Operating System   : 26300
+# Processor Detail   : AMD Ryzen AI 9 HX 370 w/ Radeon 890M           
+# CPU Frequency      : 2000 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 24
+# Host memory        : 16233 MB
+# Swap memory        : 40802 MB
+# Total Virtual      : 57036 MB
+# Available Virtual  : 13477 MB
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/Athar/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source segment_bd_salsa_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:08 . Memory (MB): peak = 611.699 ; gain = 288.047
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Vitis_Proj/custom_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2026.1/Vivado/data/ip'.
+Command: synth_design -top segment_bd_salsa_0_0 -part xczu7ev-ffvc1156-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 8 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11256
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2099.695 ; gain = 242.160
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'segment_bd_salsa_0_0' [c:/Vitis_Proj/segment_bd/ip/segment_bd_salsa_0_0/synth/segment_bd_salsa_0_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'salsa' [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:348]
+	Parameter DEPTH bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6157] synthesizing module 'salsa_datapath' [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'salsa_segment_pull_top' [C:/Vitis_Proj/segment_1/salsa_segment_pull.sv:3]
+	Parameter W bound to: 32'b00000000000000000000000000010000 
+	Parameter K bound to: 32'b00000000000000000000000000001100 
+	Parameter B bound to: 32'b00000000000000000000000000010000 
+	Parameter DW bound to: 32'b00000000000000000000000000100000 
+INFO: [Synth 8-6155] done synthesizing module 'salsa_segment_pull_top' (0#1) [C:/Vitis_Proj/segment_1/salsa_segment_pull.sv:3]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+WARNING: [Synth 8-6104] Input port 'v' has an internal driver [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:47]
+INFO: [Common 17-14] Message 'Synth 8-6104' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'salsa_datapath' (0#1) [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'salsa' (0#1) [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:348]
+INFO: [Synth 8-6155] done synthesizing module 'segment_bd_salsa_0_0' (0#1) [c:/Vitis_Proj/segment_bd/ip/segment_bd_salsa_0_0/synth/segment_bd_salsa_0_0.sv:53]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][16] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][15] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][14] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][13] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][12] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][11] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][10] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][9] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][8] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][7] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][6] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][4] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][3] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][2] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[9][0] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][16] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][15] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][14] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][13] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][12] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][11] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][10] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][9] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][8] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][7] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][6] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element pth_reg[8][4] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-6014] Unused sequential element eh_reg[8] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element qh_reg[8] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ek_reg[8][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ek_reg[8][4] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ek_reg[8][3] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ek_reg[8][2] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ek_reg[8][1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ek_reg[7][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ek_reg[7][4] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ek_reg[7][3] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ek_reg[6][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ek_reg[6][4] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ek_reg[6][3] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[8][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[8][4] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[8][3] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[8][2] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[8][1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[7][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[7][4] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[7][3] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[6][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[6][4] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[6][3] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element el_reg[5][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[8][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[8][4] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[8][3] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[8][2] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[8][1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[7][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[7][4] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[7][3] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[6][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[6][4] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[6][3] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element ql_reg[5][5] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element eri3_reg[0] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:200]
+WARNING: [Synth 8-6014] Unused sequential element eoh_reg[6][0] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:204]
+WARNING: [Synth 8-6014] Unused sequential element eoh_reg[5][0] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:204]
+WARNING: [Synth 8-6014] Unused sequential element eoh_reg[4][0] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:204]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[0].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[1].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[2].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[3].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[4].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[5].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[6].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[7].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[8].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[9].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[10].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[11].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[12].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[13].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[14].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[0].g_bank[15].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[0].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[1].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[2].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[3].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[4].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[5].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[6].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[7].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[8].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[9].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[10].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[11].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+WARNING: [Synth 8-6014] Unused sequential element g_half[1].g_bank[12].wa_reg[1] was removed.  [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:111]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3936] Found unconnected internal register 'pth_reg[8][3]' and it is trimmed from '17' to '4' bits. [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pth_reg[8][2]' and it is trimmed from '17' to '4' bits. [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pth_reg[8][1]' and it is trimmed from '17' to '4' bits. [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-3936] Found unconnected internal register 'pth_reg[8][0]' and it is trimmed from '17' to '4' bits. [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:147]
+WARNING: [Synth 8-3936] Found unconnected internal register 'eh_reg[7]' and it is trimmed from '5' to '2' bits. [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-3936] Found unconnected internal register 'eh_reg[6]' and it is trimmed from '5' to '2' bits. [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-3936] Found unconnected internal register 'qh_reg[7]' and it is trimmed from '5' to '2' bits. [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-3936] Found unconnected internal register 'qh_reg[6]' and it is trimmed from '5' to '2' bits. [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+WARNING: [Synth 8-3936] Found unconnected internal register 'qh_reg[5]' and it is trimmed from '5' to '4' bits. [C:/Vitis_Proj/segment_1/salsa_pkg_and_datapath.sv:199]
+INFO: [Synth 8-7129] Port s_axis_tlast in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awaddr[1] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awaddr[0] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awprot[2] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awprot[1] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awprot[0] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_wstrb[3] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_wstrb[2] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_wstrb[1] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_wstrb[0] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_araddr[1] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_araddr[0] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arprot[2] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arprot[1] in module salsa is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arprot[0] in module salsa is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2422.918 ; gain = 565.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2422.918 ; gain = 565.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2422.918 ; gain = 565.383
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.689 . Memory (MB): peak = 2422.918 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2491.164 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.565 . Memory (MB): peak = 2509.066 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 2509.066 ; gain = 651.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 2509.066 ; gain = 651.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 2509.066 ; gain = 651.531
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[3].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[4].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[5].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[6].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[7].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[8].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[9].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[10].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[11].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[12].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[13].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[14].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[15].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[0].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[1].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[0].g_bank[2].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[3].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[4].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[5].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[6].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[7].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[8].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[9].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[10].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[11].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[12].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[13].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[14].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[15].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[0].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[1].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath:/g_half[1].g_bank[2].mem_reg"'.
+INFO: [Synth 8-6904] The RAM "salsa:/fifo_reg" of size (depth=16 x width=65) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 2509.066 ; gain = 651.531
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 9     
+	   3 Input   32 Bit       Adders := 16    
+	   2 Input   18 Bit       Adders := 17    
+	   2 Input   17 Bit       Adders := 17    
+	   2 Input    9 Bit       Adders := 1     
+	   4 Input    8 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 79    
++---XORs : 
+	   2 Input     17 Bit         XORs := 16    
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 325   
+	               17 Bit    Registers := 128   
+	               16 Bit    Registers := 13    
+	               15 Bit    Registers := 37    
+	               14 Bit    Registers := 9     
+	               12 Bit    Registers := 256   
+	                9 Bit    Registers := 32    
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 60    
+	                4 Bit    Registers := 27    
+	                2 Bit    Registers := 51    
+	                1 Bit    Registers := 207   
++---RAMs : 
+	             128K Bit	(4096 X 32 bit)          RAMs := 32    
+	               1K Bit	(16 X 65 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 617   
+	   3 Input   32 Bit        Muxes := 132   
+	   2 Input   17 Bit        Muxes := 127   
+	   3 Input   17 Bit        Muxes := 12    
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 278   
+	   2 Input    4 Bit        Muxes := 94    
+	   6 Input    3 Bit        Muxes := 20    
+	   2 Input    3 Bit        Muxes := 40    
+	   2 Input    2 Bit        Muxes := 64    
+	   2 Input    1 Bit        Muxes := 63    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6904] The RAM "segment_bd_salsa_0_0/fifo_reg" of size (depth=16 x width=65) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-3917] design segment_bd_salsa_0_0 has port s_axi_bresp[1] driven by constant 0
+INFO: [Synth 8-3917] design segment_bd_salsa_0_0 has port s_axi_bresp[0] driven by constant 0
+INFO: [Synth 8-3917] design segment_bd_salsa_0_0 has port s_axi_rresp[1] driven by constant 0
+INFO: [Synth 8-3917] design segment_bd_salsa_0_0 has port s_axi_rresp[0] driven by constant 0
+INFO: [Synth 8-7129] Port s_axis_tlast in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awaddr[1] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awaddr[0] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awprot[2] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awprot[1] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_awprot[0] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_wstrb[3] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_wstrb[2] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_wstrb[1] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_wstrb[0] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_araddr[1] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_araddr[0] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arprot[2] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arprot[1] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axi_arprot[0] in module segment_bd_salsa_0_0 is either unconnected or has no load
+INFO: [Synth 8-6904] The RAM "segment_bd_salsa_0_0/fifo_reg" of size (depth=16 x width=65) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB0/g_half[0].g_bank[15].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB0/g_half[0].g_bank[14].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB0/g_half[0].g_bank[15].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB0/g_half[0].g_bank[14].mem_reg"'.
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB0/g_half[0].g_bank[15].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB0/g_half[0].g_bank[15].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB0/g_half[0].g_bank[14].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB0/g_half[0].g_bank[14].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB1/g_half[1].g_bank[4].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB1/g_half[1].g_bank[12].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB1/g_half[1].g_bank[4].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB1/g_half[1].g_bank[12].mem_reg"'.
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB1/g_half[1].g_bank[4].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB1/g_half[1].g_bank[4].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB1/g_half[1].g_bank[12].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB1/g_half[1].g_bank[12].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[0].g_bank[4].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[0].g_bank[9].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[0].g_bank[13].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[0].g_bank[1].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[5].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[6].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[7].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[13].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[14].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[15].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[1].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[0].g_bank[4].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[0].g_bank[9].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[0].g_bank[13].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[0].g_bank[1].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[5].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[6].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[7].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[13].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[14].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[15].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB2/g_half[1].g_bank[1].mem_reg"'.
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB2/g_half[0].g_bank[4].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB2/g_half[0].g_bank[4].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB2/g_half[0].g_bank[9].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB2/g_half[0].g_bank[9].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB2/g_half[0].g_bank[13].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB2/g_half[0].g_bank[13].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB2/g_half[0].g_bank[1].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB2/g_half[0].g_bank[1].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB2/g_half[1].g_bank[5].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB2/g_half[1].g_bank[5].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB2/g_half[1].g_bank[6].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB2/g_half[1].g_bank[6].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB2/g_half[1].g_bank[7].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB2/g_half[1].g_bank[7].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB2/g_half[1].g_bank[13].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB2/g_half[1].g_bank[13].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB2/g_half[1].g_bank[14].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB2/g_half[1].g_bank[14].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB2/g_half[1].g_bank[15].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB2/g_half[1].g_bank[15].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB2/g_half[1].g_bank[1].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB2/g_half[1].g_bank[1].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sdv_reg[3][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sdv_reg[4][0] )
+INFO: [Synth 8-3886] merging instance 'sdv_reg[5][0]' (FD) to 'sdv_reg[4][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sdv_reg[4][0] )
+INFO: [Synth 8-3886] merging instance 'sdv_reg[6][0]' (FD) to 'sdv_reg[4][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sdv_reg[4][0] )
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB3/g_half[1].g_bank[8].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB3/g_half[1].g_bank[10].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB3/g_half[1].g_bank[0].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB3/g_half[1].g_bank[2].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB3/g_half[1].g_bank[8].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB3/g_half[1].g_bank[10].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB3/g_half[1].g_bank[0].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB3/g_half[1].g_bank[2].mem_reg"'.
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB3/g_half[1].g_bank[8].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB3/g_half[1].g_bank[8].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB3/g_half[1].g_bank[10].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB3/g_half[1].g_bank[10].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB3/g_half[1].g_bank[0].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB3/g_half[1].g_bank[0].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB3/g_half[1].g_bank[2].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB3/g_half[1].g_bank[2].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[5].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[7].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[8].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[11].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[12].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[0].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[1].g_bank[3].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[1].g_bank[9].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[1].g_bank[11].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[5].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[7].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[8].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[11].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[12].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[0].g_bank[0].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[1].g_bank[3].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[1].g_bank[9].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB4/g_half[1].g_bank[11].mem_reg"'.
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB4/g_half[0].g_bank[5].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB4/g_half[0].g_bank[5].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB4/g_half[0].g_bank[7].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB4/g_half[0].g_bank[7].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB4/g_half[0].g_bank[8].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB4/g_half[0].g_bank[8].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB4/g_half[0].g_bank[11].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB4/g_half[0].g_bank[11].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB4/g_half[0].g_bank[12].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB4/g_half[0].g_bank[12].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB4/g_half[0].g_bank[0].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB4/g_half[0].g_bank[0].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB4/g_half[1].g_bank[3].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB4/g_half[1].g_bank[3].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB4/g_half[1].g_bank[9].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB4/g_half[1].g_bank[9].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB4/g_half[1].g_bank[11].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB4/g_half[1].g_bank[11].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB5/g_half[0].g_bank[2].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB5/g_half[0].g_bank[2].mem_reg"'.
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB5/g_half[0].g_bank[2].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB5/g_half[0].g_bank[2].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][0]' (FDR) to 'bp7_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][1]' (FDR) to 'bp7_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][2]' (FDR) to 'bp7_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][3]' (FDR) to 'bp7_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][4]' (FDR) to 'bp7_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][5]' (FDR) to 'bp7_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][6]' (FDR) to 'bp7_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][7]' (FDR) to 'bp7_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][8]' (FDR) to 'bp7_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][9]' (FDR) to 'bp7_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][10]' (FDR) to 'bp7_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][11]' (FDR) to 'bp7_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][12]' (FDR) to 'bp7_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][13]' (FDR) to 'bp7_reg[0][14]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][14]' (FDR) to 'bp7_reg[0][15]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][15]' (FDR) to 'bp7_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][16]' (FDR) to 'bp7_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][17]' (FDR) to 'bp7_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][18]' (FDR) to 'bp7_reg[0][19]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][19]' (FDR) to 'bp7_reg[0][20]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][20]' (FDR) to 'bp7_reg[0][21]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][21]' (FDR) to 'bp7_reg[0][22]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][22]' (FDR) to 'bp7_reg[0][23]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][23]' (FDR) to 'bp7_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][24]' (FDR) to 'bp7_reg[0][25]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][25]' (FDR) to 'bp7_reg[0][26]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][26]' (FDR) to 'bp7_reg[0][27]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][27]' (FDR) to 'bp7_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][28]' (FDR) to 'bp7_reg[0][29]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][29]' (FDR) to 'bp7_reg[0][30]'
+INFO: [Synth 8-3886] merging instance 'bp7_reg[0][30]' (FDR) to 'bp7_reg[0][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bp7_reg[0][31] )
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB6/g_half[0].g_bank[3].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB6/g_half[0].g_bank[6].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB6/g_half[0].g_bank[10].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB6/g_half[0].g_bank[3].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB6/g_half[0].g_bank[6].mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"salsa_datapath__GB6/g_half[0].g_bank[10].mem_reg"'.
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB6/g_half[0].g_bank[3].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB6/g_half[0].g_bank[3].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB6/g_half[0].g_bank[6].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB6/g_half[0].g_bank[6].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-6776] UltraRAM "salsa_datapath__GB6/g_half[0].g_bank[10].mem_reg": Pipeline stages found = 1; Recommended pipeline stages =0, Maximum pipeline stages = 2
+INFO: [Synth 8-5814] Pipeline result for URAM ("salsa_datapath__GB6/g_half[0].g_bank[10].mem_reg"): Matrix size= (1 cols x 1 rows) | Pipeline stages => ( available = 1, absorbed = 1 )
+INFO: [Synth 8-3886] merging instance 'ancx_reg[2][0]' (FD) to 'wd_reg[2][key][12]'
+INFO: [Synth 8-3886] merging instance 'ancx_reg[2][1]' (FD) to 'wd_reg[2][key][13]'
+INFO: [Synth 8-3886] merging instance 'ancx_reg[2][2]' (FD) to 'wd_reg[2][key][14]'
+INFO: [Synth 8-3886] merging instance 'ancx_reg[2][3]' (FD) to 'wd_reg[2][key][15]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_isp_reg[0][1]' (FD) to 'u_fe/tu_reg'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][15]' (FDR) to 'u_fe/t_cand_reg[0][0][16]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][16]' (FDR) to 'u_fe/t_cand_reg[0][0][12]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][12]' (FDR) to 'u_fe/t_cand_reg[0][0][13]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][13]' (FDR) to 'u_fe/t_cand_reg[0][0][14]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][14]' (FDR) to 'u_fe/t_cand_reg[0][0][9]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][9]' (FDR) to 'u_fe/t_cand_reg[0][0][10]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][10]' (FDR) to 'u_fe/t_cand_reg[0][0][11]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][11]' (FDR) to 'u_fe/t_cand_reg[0][0][6]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][6]' (FDR) to 'u_fe/t_cand_reg[0][0][7]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][7]' (FDR) to 'u_fe/t_cand_reg[0][0][8]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][8]' (FDR) to 'u_fe/t_cand_reg[0][0][4]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][4]' (FDR) to 'u_fe/t_cand_reg[0][0][5]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][5]' (FDR) to 'u_fe/t_cand_reg[0][0][2]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[13][0][15]' (FD) to 'u_fe/t_cand_reg[13][0][16]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[11][0][15]' (FD) to 'u_fe/t_cand_reg[11][0][16]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[11][0][16]' (FD) to 'u_fe/t_cand_reg[11][0][13]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[11][0][13]' (FD) to 'u_fe/t_cand_reg[11][0][14]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[10][0][15]' (FD) to 'u_fe/t_cand_reg[10][0][16]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[10][0][16]' (FD) to 'u_fe/t_cand_reg[10][0][12]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[10][0][12]' (FD) to 'u_fe/t_cand_reg[10][0][13]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[10][0][13]' (FD) to 'u_fe/t_cand_reg[10][0][14]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[0][0][2]' (FDR) to 'u_fe/t_cand_reg[0][0][3]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][3]' (FDR) to 'u_fe/t_cand_reg[1][0][4]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][4]' (FDR) to 'u_fe/t_cand_reg[1][0][5]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][5]' (FDR) to 'u_fe/t_cand_reg[1][0][6]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][6]' (FDR) to 'u_fe/t_cand_reg[1][0][7]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][7]' (FDR) to 'u_fe/t_cand_reg[1][0][8]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][8]' (FDR) to 'u_fe/t_cand_reg[1][0][9]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][9]' (FDR) to 'u_fe/t_cand_reg[1][0][10]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][10]' (FDR) to 'u_fe/t_cand_reg[1][0][11]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][11]' (FDR) to 'u_fe/t_cand_reg[1][0][12]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][12]' (FDR) to 'u_fe/t_cand_reg[1][0][13]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][13]' (FDR) to 'u_fe/t_cand_reg[1][0][14]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][14]' (FDR) to 'u_fe/t_cand_reg[1][0][15]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[1][0][15]' (FDR) to 'u_fe/t_cand_reg[1][0][16]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][4]' (FDR) to 'u_fe/t_cand_reg[2][0][5]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][5]' (FDR) to 'u_fe/t_cand_reg[2][0][6]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][6]' (FDR) to 'u_fe/t_cand_reg[2][0][7]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][7]' (FDR) to 'u_fe/t_cand_reg[2][0][8]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][8]' (FDR) to 'u_fe/t_cand_reg[2][0][9]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][9]' (FDR) to 'u_fe/t_cand_reg[2][0][10]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][10]' (FDR) to 'u_fe/t_cand_reg[2][0][11]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][11]' (FDR) to 'u_fe/t_cand_reg[2][0][12]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][12]' (FDR) to 'u_fe/t_cand_reg[2][0][13]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][13]' (FDR) to 'u_fe/t_cand_reg[2][0][14]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][14]' (FDR) to 'u_fe/t_cand_reg[2][0][15]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[2][0][15]' (FDR) to 'u_fe/t_cand_reg[2][0][16]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[3][0][5]' (FDR) to 'u_fe/t_cand_reg[3][0][6]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[3][0][6]' (FDR) to 'u_fe/t_cand_reg[3][0][7]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[3][0][7]' (FDR) to 'u_fe/t_cand_reg[3][0][8]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[3][0][8]' (FDR) to 'u_fe/t_cand_reg[3][0][9]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[3][0][9]' (FDR) to 'u_fe/t_cand_reg[3][0][10]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[3][0][10]' (FDR) to 'u_fe/t_cand_reg[3][0][11]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[3][0][11]' (FDR) to 'u_fe/t_cand_reg[3][0][12]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[3][0][12]' (FDR) to 'u_fe/t_cand_reg[3][0][13]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[3][0][13]' (FDR) to 'u_fe/t_cand_reg[3][0][14]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[3][0][14]' (FDR) to 'u_fe/t_cand_reg[3][0][15]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[3][0][15]' (FDR) to 'u_fe/t_cand_reg[3][0][16]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[4][0][6]' (FD) to 'u_fe/t_cand_reg[4][0][7]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[4][0][7]' (FD) to 'u_fe/t_cand_reg[4][0][8]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[4][0][8]' (FD) to 'u_fe/t_cand_reg[4][0][9]'
+INFO: [Synth 8-3886] merging instance 'u_fe/t_cand_reg[4][0][9]' (FD) to 'u_fe/t_cand_reg[4][0][10]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_fe/\t_cand_reg[4][0][16] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:02:17 . Memory (MB): peak = 2509.066 ; gain = 651.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Ultra RAM: Preliminary Mapping Report (see note below)
++--------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+|Module Name         | RTL Object                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | URAM288 | Matrix Shape | FF provided for Pipeline | FF absorbed | 
++--------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+|salsa_datapath__GB0 | g_half[0].g_bank[15].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB0 | g_half[0].g_bank[14].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB1 | g_half[1].g_bank[4].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB1 | g_half[1].g_bank[12].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[0].g_bank[4].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[0].g_bank[9].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[0].g_bank[13].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[0].g_bank[1].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[5].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[6].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[7].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[13].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[14].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[15].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[1].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB3 | g_half[1].g_bank[8].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB3 | g_half[1].g_bank[10].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB3 | g_half[1].g_bank[0].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB3 | g_half[1].g_bank[2].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[5].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[7].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[8].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[11].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[12].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[0].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[1].g_bank[3].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[1].g_bank[9].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[1].g_bank[11].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB5 | g_half[0].g_bank[2].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB6 | g_half[0].g_bank[3].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB6 | g_half[0].g_bank[6].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB6 | g_half[0].g_bank[10].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
++--------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Ultra RAMs at the current stage of the synthesis flow. Some Ultra RAMs may be reimplemented as non Ultra RAM primitives later in the synthesis flow. Multiple instantiated Ultra RAMs are reported only once. Fields "FF provided for Pipeline" and "FF absorbed" respectively indicate number of registers available for pipelining and number of registers absorbed in the URAM matrix for pipelining. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++---------------------+------------+-----------+----------------------+---------------+
+|Module Name          | RTL Object | Inference | Size (Depth x Width) | Primitives    | 
++---------------------+------------+-----------+----------------------+---------------+
+|segment_bd_salsa_0_0 | fifo_reg   | Implied   | 16 x 65              | RAM32M16 x 5  | 
++---------------------+------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:02:27 . Memory (MB): peak = 2509.066 ; gain = 651.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Ultra RAM: Final Mapping Report
++--------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+|Module Name         | RTL Object                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | URAM288 | Matrix Shape | FF provided for Pipeline | FF absorbed | 
++--------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+|salsa_datapath__GB0 | g_half[0].g_bank[15].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB0 | g_half[0].g_bank[14].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB1 | g_half[1].g_bank[4].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB1 | g_half[1].g_bank[12].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[0].g_bank[4].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[0].g_bank[9].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[0].g_bank[13].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[0].g_bank[1].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[5].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[6].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[7].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[13].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[14].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[15].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB2 | g_half[1].g_bank[1].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB3 | g_half[1].g_bank[8].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB3 | g_half[1].g_bank[10].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB3 | g_half[1].g_bank[0].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB3 | g_half[1].g_bank[2].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[5].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[7].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[8].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[11].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[12].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[0].g_bank[0].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[1].g_bank[3].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[1].g_bank[9].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB4 | g_half[1].g_bank[11].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB5 | g_half[0].g_bank[2].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB6 | g_half[0].g_bank[3].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB6 | g_half[0].g_bank[6].mem_reg  | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
+|salsa_datapath__GB6 | g_half[0].g_bank[10].mem_reg | 4 K x 32               |   | R | 4 K x 32               | W |   | Port A and B     | 1       | 1x1          | 1                        | 1           | 
++--------------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+
+
+Distributed RAM: Final Mapping Report
++---------------------+------------+-----------+----------------------+---------------+
+|Module Name          | RTL Object | Inference | Size (Depth x Width) | Primitives    | 
++---------------------+------------+-----------+----------------------+---------------+
+|segment_bd_salsa_0_0 | fifo_reg   | Implied   | 16 x 65              | RAM32M16 x 5  | 
++---------------------+------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:47 ; elapsed = 00:02:47 . Memory (MB): peak = 2509.066 ; gain = 651.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:00 ; elapsed = 00:03:03 . Memory (MB): peak = 2677.070 ; gain = 819.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:01 ; elapsed = 00:03:04 . Memory (MB): peak = 2677.070 ; gain = 819.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:02 ; elapsed = 00:03:05 . Memory (MB): peak = 2678.852 ; gain = 821.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:02 ; elapsed = 00:03:06 . Memory (MB): peak = 2678.852 ; gain = 821.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:03 ; elapsed = 00:03:07 . Memory (MB): peak = 2678.852 ; gain = 821.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:04 ; elapsed = 00:03:07 . Memory (MB): peak = 2678.852 ; gain = 821.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------------+-----------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name          | RTL Name                                | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------+-----------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|segment_bd_salsa_0_0 | inst/u_dp/g_half[0].g_bank[1].we_reg[2] | 3      | 32    | NO           | NO                 | YES               | 32     | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/qh_reg[7][2]                  | 5      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/sdv_reg[6][16]                | 4      | 13    | NO           | NO                 | YES               | 13     | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/qoh_reg[6][0][1][3]           | 3      | 32    | NO           | NO                 | YES               | 32     | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/wd_reg[9][seq][13]            | 9      | 14    | NO           | YES                | YES               | 14     | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/ql_reg[7][2][4]               | 4      | 10    | NO           | NO                 | YES               | 10     | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/el_reg[7][2][4]               | 4      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/ek_reg[7][1][4]               | 4      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/qh_reg[5][4]                  | 3      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/wd_reg[9][key][15]            | 7      | 4     | NO           | NO                 | YES               | 4      | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/wd_reg[9][key][11]            | 8      | 14    | NO           | NO                 | YES               | 14     | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/eh_reg[5][4]                  | 3      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/eh_reg[7][2]                  | 5      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/v_reg[6][18]                  | 6      | 14    | NO           | YES                | YES               | 14     | 0       | 
+|segment_bd_salsa_0_0 | inst/u_dp/v_reg[6][15]                  | 5      | 18    | NO           | NO                 | YES               | 18     | 0       | 
++---------------------+-----------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY8   |   897|
+|2     |LUT1     |   361|
+|3     |LUT2     |  1076|
+|4     |LUT3     |  5261|
+|5     |LUT4     |  6842|
+|6     |LUT5     |  9410|
+|7     |LUT6     | 11166|
+|8     |MUXF7    |   716|
+|9     |RAM32M16 |     5|
+|10    |SRL16E   |   177|
+|11    |URAM288  |    32|
+|12    |FDRE     | 15921|
+|13    |FDSE     |    95|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:04 ; elapsed = 00:03:07 . Memory (MB): peak = 2678.852 ; gain = 821.316
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:33 ; elapsed = 00:03:02 . Memory (MB): peak = 2678.852 ; gain = 735.168
+Synthesis Optimization Complete : Time (s): cpu = 00:02:04 ; elapsed = 00:03:13 . Memory (MB): peak = 2695.191 ; gain = 821.316
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.526 . Memory (MB): peak = 2708.707 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1618 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'segment_bd_salsa_0_0' is not ideal for floorplanning, since the cellview 'salsa_datapath' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2843.980 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 5 instances
+
+Synth Design complete | Checksum: cce75d1a
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+335 Infos, 210 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:23 ; elapsed = 00:03:38 . Memory (MB): peak = 2843.992 ; gain = 2183.176
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 2843.992 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Vitis_Proj/segment_1/segment_1.runs/segment_bd_salsa_0_0_synth_1/segment_bd_salsa_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file segment_bd_salsa_0_0_utilization_synth.rpt -pb segment_bd_salsa_0_0_utilization_synth.pb
+write_vhdl: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2843.992 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 20 22:28:51 2026...

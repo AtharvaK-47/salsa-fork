@@ -1,0 +1,297 @@
+
+*** Running vivado
+    with args -log segment_bd_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source segment_bd_wrapper.tcl
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 21-jul-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Fri Nov 20 22:28:58 2026
+# Process ID         : 17372
+# Current directory  : C:/Vitis_Proj/segment_1/segment_1.runs/synth_1
+# Command line       : vivado.exe -log segment_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source segment_bd_wrapper.tcl
+# Log file           : C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/segment_bd_wrapper.vds
+# Journal file       : C:/Vitis_Proj/segment_1/segment_1.runs/synth_1\vivado.jou
+# Running On         : Asus
+# Platform           : Windows 11
+# Operating System   : 26300
+# Processor Detail   : AMD Ryzen AI 9 HX 370 w/ Radeon 890M           
+# CPU Frequency      : 2000 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 24
+# Host memory        : 16233 MB
+# Swap memory        : 40802 MB
+# Total Virtual      : 57036 MB
+# Available Virtual  : 12664 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Fri Nov 20 22:28:58 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Sourcing tcl script 'C:/Users/Athar/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source segment_bd_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:07 . Memory (MB): peak = 612.488 ; gain = 288.934
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Vitis_Proj/custom_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2026.1/Vivado/data/ip'.
+add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 665.098 ; gain = 52.609
+Command: synth_design -top segment_bd_wrapper -part xczu7ev-ffvc1156-2-e -directive PerformanceOptimized -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+INFO: [Vivado_Tcl 97-128] Directive used for synth_design is: performanceoptimized
+INFO: [Vivado_Tcl 97-135] Option shreg_min_size used for synth_design is: 5
+INFO: [Vivado_Tcl 97-134] Option resource_sharing used for synth_design is: off
+INFO: [Vivado_Tcl 97-131] Option fsm_extraction used for synth_design is: one_hot
+INFO: [Vivado_Tcl 97-132] Option keep_equivalent_registers used for synth_design
+INFO: [Vivado_Tcl 97-133] Option no_lc used for synth_design
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 8 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 37996
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2169.797 ; gain = 240.742
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'segment_bd_wrapper' [C:/Vitis_Proj/segment_bd/hdl/segment_bd_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'segment_bd' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:13]
+INFO: [Synth 8-6157] synthesizing module 'segment_bd_axi_dma_0_0' [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'segment_bd_axi_dma_0_0' (0#1) [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'segment_bd_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:166]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'segment_bd_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:166]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'segment_bd_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:166]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'segment_bd_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:166]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'segment_bd_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:166]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'segment_bd_axi_dma_0_0' has 64 connections declared, but only 59 given [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:166]
+INFO: [Synth 8-6157] synthesizing module 'segment_bd_axi_smc_0' [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'segment_bd_axi_smc_0' (0#1) [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_axi_smc_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'segment_bd_axi_smc_0' is unconnected for instance 'axi_smc' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:226]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'segment_bd_axi_smc_0' is unconnected for instance 'axi_smc' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:226]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'segment_bd_axi_smc_0' is unconnected for instance 'axi_smc' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:226]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'segment_bd_axi_smc_0' has 79 connections declared, but only 76 given [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:226]
+INFO: [Synth 8-6157] synthesizing module 'segment_bd_axi_smc_1_0' [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'segment_bd_axi_smc_1_0' (0#1) [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'segment_bd_rst_ps8_0_100M_0' [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'segment_bd_rst_ps8_0_100M_0' (0#1) [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_rst_ps8_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'segment_bd_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:372]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'segment_bd_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:372]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'segment_bd_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:372]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'segment_bd_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:372]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_100M' of module 'segment_bd_rst_ps8_0_100M_0' has 10 connections declared, but only 6 given [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:372]
+INFO: [Synth 8-6157] synthesizing module 'segment_bd_salsa_0_0' [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_salsa_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'segment_bd_salsa_0_0' (0#1) [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_salsa_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'segment_bd_zynq_ultra_ps_e_0_0' [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'segment_bd_zynq_ultra_ps_e_0_0' (0#1) [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/.Xil/Vivado-17372-Asus/realtime/segment_bd_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'segment_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:409]
+WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'segment_bd_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:409]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'segment_bd_zynq_ultra_ps_e_0_0' has 83 connections declared, but only 81 given [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:409]
+INFO: [Synth 8-6155] done synthesizing module 'segment_bd' (0#1) [C:/Vitis_Proj/segment_bd/synth/segment_bd.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'segment_bd_wrapper' (0#1) [C:/Vitis_Proj/segment_bd/hdl/segment_bd_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2296.844 ; gain = 367.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2296.844 ; gain = 367.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2296.844 ; gain = 367.789
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2296.844 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_zynq_ultra_ps_e_0_0/segment_bd_zynq_ultra_ps_e_0_0/segment_bd_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'segment_bd_i/zynq_ultra_ps_e_0'
+create_clock: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2296.844 ; gain = 0.000
+Finished Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_zynq_ultra_ps_e_0_0/segment_bd_zynq_ultra_ps_e_0_0/segment_bd_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'segment_bd_i/zynq_ultra_ps_e_0'
+Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_axi_dma_0_0/segment_bd_axi_dma_0_0/segment_bd_axi_dma_0_0_in_context.xdc] for cell 'segment_bd_i/axi_dma_0'
+Finished Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_axi_dma_0_0/segment_bd_axi_dma_0_0/segment_bd_axi_dma_0_0_in_context.xdc] for cell 'segment_bd_i/axi_dma_0'
+Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_axi_smc_0/segment_bd_axi_smc_0/segment_bd_axi_smc_0_in_context.xdc] for cell 'segment_bd_i/axi_smc'
+Finished Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_axi_smc_0/segment_bd_axi_smc_0/segment_bd_axi_smc_0_in_context.xdc] for cell 'segment_bd_i/axi_smc'
+Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_rst_ps8_0_100M_0/segment_bd_rst_ps8_0_100M_0/segment_bd_rst_ps8_0_100M_0_in_context.xdc] for cell 'segment_bd_i/rst_ps8_0_100M'
+Finished Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_rst_ps8_0_100M_0/segment_bd_rst_ps8_0_100M_0/segment_bd_rst_ps8_0_100M_0_in_context.xdc] for cell 'segment_bd_i/rst_ps8_0_100M'
+Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_axi_smc_1_0/segment_bd_axi_smc_1_0/segment_bd_axi_smc_1_0_in_context.xdc] for cell 'segment_bd_i/axi_smc_1'
+Finished Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_axi_smc_1_0/segment_bd_axi_smc_1_0/segment_bd_axi_smc_1_0_in_context.xdc] for cell 'segment_bd_i/axi_smc_1'
+Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_salsa_0_0/segment_bd_salsa_0_0/segment_bd_salsa_0_0_in_context.xdc] for cell 'segment_bd_i/salsa_0'
+Finished Parsing XDC File [c:/Vitis_Proj/segment_bd/ip/segment_bd_salsa_0_0/segment_bd_salsa_0_0/segment_bd_salsa_0_0_in_context.xdc] for cell 'segment_bd_i/salsa_0'
+Parsing XDC File [C:/Vitis_Proj/segment_1/segment_1.srcs/constrs_1/new/segment_timing.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Vitis_Proj/segment_1/segment_1.srcs/constrs_1/new/segment_timing.xdc:1]
+Finished Parsing XDC File [C:/Vitis_Proj/segment_1/segment_1.srcs/constrs_1/new/segment_timing.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Vitis_Proj/segment_1/segment_1.srcs/constrs_1/new/segment_timing.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/segment_bd_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Parsing XDC File [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2296.844 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2296.844 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2296.844 ; gain = 367.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2296.844 ; gain = 367.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2296.844 ; gain = 367.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2296.844 ; gain = 367.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 2332.566 ; gain = 403.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:05 ; elapsed = 00:01:15 . Memory (MB): peak = 3043.633 ; gain = 1114.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:15 . Memory (MB): peak = 3043.633 ; gain = 1114.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:06 ; elapsed = 00:01:15 . Memory (MB): peak = 3054.449 ; gain = 1125.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:27 . Memory (MB): peak = 3330.434 ; gain = 1401.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:27 . Memory (MB): peak = 3330.434 ; gain = 1401.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:27 . Memory (MB): peak = 3330.434 ; gain = 1401.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:27 . Memory (MB): peak = 3330.434 ; gain = 1401.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:17 ; elapsed = 00:01:27 . Memory (MB): peak = 3330.434 ; gain = 1401.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:17 ; elapsed = 00:01:27 . Memory (MB): peak = 3330.434 ; gain = 1401.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------------+----------+
+|      |BlackBox name                  |Instances |
++------+-------------------------------+----------+
+|1     |segment_bd_axi_dma_0_0         |         1|
+|2     |segment_bd_axi_smc_0           |         1|
+|3     |segment_bd_axi_smc_1_0         |         1|
+|4     |segment_bd_rst_ps8_0_100M_0    |         1|
+|5     |segment_bd_salsa_0_0           |         1|
+|6     |segment_bd_zynq_ultra_ps_e_0_0 |         1|
++------+-------------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------------+------+
+|      |Cell                         |Count |
++------+-----------------------------+------+
+|1     |segment_bd_axi_dma_0         |     1|
+|2     |segment_bd_axi_smc           |     1|
+|3     |segment_bd_axi_smc_1         |     1|
+|4     |segment_bd_rst_ps8_0_100M    |     1|
+|5     |segment_bd_salsa_0           |     1|
+|6     |segment_bd_zynq_ultra_ps_e_0 |     1|
++------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:17 ; elapsed = 00:01:27 . Memory (MB): peak = 3330.434 ; gain = 1401.379
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:01:14 . Memory (MB): peak = 3330.434 ; gain = 1401.379
+Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:01:29 . Memory (MB): peak = 3330.434 ; gain = 1401.379
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.011 . Memory (MB): peak = 3330.434 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3330.434 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a9cf92d5
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+39 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:34 ; elapsed = 00:01:53 . Memory (MB): peak = 3330.434 ; gain = 2665.336
+INFO: [Common 17-1381] The checkpoint 'C:/Vitis_Proj/segment_1/segment_1.runs/synth_1/segment_bd_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file segment_bd_wrapper_utilization_synth.rpt -pb segment_bd_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 20 22:31:21 2026...

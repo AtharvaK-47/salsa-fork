@@ -9,7 +9,7 @@ module tb_salsa;
 
   logic in_valid = 0; word_t in_word = '0;
   logic out_valid; word_t out_word;
-  logic [B-1:0][31:0] bank_stores; logic [31:0] root_stores;
+  logic [B-1:0][31:0] bank_stores; logic [31:0] root_stores; logic init_done;
 
   salsa_datapath dut (.*);
 
@@ -82,12 +82,14 @@ module tb_salsa;
 
   initial begin
     for (int n = 1; n < 2*N; n++) gold[n] = ID;
-    repeat (3) @(posedge clk); rst = 0; #1;
+    repeat (3) @(posedge clk); rst = 0;
+    while (!init_done) @(posedge clk);
+    #1;
     run("random", 20000);
     run("neighbours", 20000);
     run("itch", 20000);
     in_valid = 0;
-    repeat (8) @(posedge clk);
+    repeat (16) @(posedge clk);
     $display("%s tree: %0d queries checked, %0d errors, %0d updates, exp queue left %0d",
              MIN ? "min" : "max", checked, errors, root_stores, exp_q.size());
     if (errors == 0 && exp_q.size() == 0) $display("PASS"); else $display("FAIL");

@@ -1,0 +1,128 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Fri Nov 20 16:22:44 2026
+# Process ID         : 7816
+# Current directory  : C:/Vitis_Proj/segment_1
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent35424 C:\Vitis_Proj\segment_1\segment_1.xpr
+# Log file           : C:/Vitis_Proj/segment_1/vivado.log
+# Journal file       : C:/Vitis_Proj/segment_1\vivado.jou
+# Running On         : Asus
+# Platform           : Windows 11
+# Operating System   : 26300
+# Processor Detail   : AMD Ryzen AI 9 HX 370 w/ Radeon 890M           
+# CPU Frequency      : 2000 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 24
+# Host memory        : 16233 MB
+# Swap memory        : 40802 MB
+# Total Virtual      : 57036 MB
+# Available Virtual  : 21485 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Vitis_Proj/segment_1/segment_1.xpr
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {c:/Vitis_Proj/segment_1 C:/Vitis_Proj/custom_ip_repo} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  c:/Vitis_Proj/custom_ip_repo [current_project]
+update_ip_catalog
+update_ip_catalog -rebuild
+get_ipdefs -all *salsa*
+get_ipdefs -all *segment*
+C:/Vitis_Proj/custom_ip_repo
+puts "TOP MODULE: [get_property top [current_fileset]]"
+get_files -compile_order sources -used_in synthesis
+get_files -compile_order sources -used_in synthesis
+open_bd_design {C:/Vitis_Proj/segment_bd/segment_bd.bd}
+ipx::edit_ip_in_project -upgrade true -name segment_tree_ip_edit -directory C:/Vitis_Proj/ip_edit_work/segment_tree_ip_edit c:/Vitis_Proj/custom_ip_repo/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Vitis_Proj/custom_ip_repo
+close_bd_design [get_bd_designs segment_bd]
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP C:/Vitis_Proj/segment_tree_ip_repo
+open_bd_design {C:/Vitis_Proj/segment_bd/segment_bd.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:salsa:1.0 salsa_1
+endgroup
+set_property location {3 1099 -112} [get_bd_cells salsa_1]
+undo
+save_bd_design
+close_bd_design [get_bd_designs segment_bd]
+open_bd_design {C:/Vitis_Proj/segment_bd/segment_bd.bd}
+delete_bd_objs [get_bd_cells salsa_1]
+make_wrapper -files [get_files C:/Vitis_Proj/segment_bd/segment_bd.bd] -top
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {segment_bd_zynq_ultra_ps_e_0_0 segment_bd_rst_ps8_0_100M_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {segment_bd_zynq_ultra_ps_e_0_0 segment_bd_rst_ps8_0_100M_0}] -no_script -sync -force -quiet
+make_wrapper -files [get_files C:/Vitis_Proj/segment_bd/segment_bd.bd] -top
+add_files -norecurse C:/Vitis_Proj/segment_bd/hdl/segment_bd_wrapper.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top segment_bd_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+validate_bd_design -force
+update_module_reference segment_bd_salsa_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+get_param general.maxThreads
+set_param general.maxThreads 8
+set_param synth.maxThreads 8
+open_run impl_1
+report_timing -setup -slack_lesser_than 0 -max_paths 10000 -nworst 1 -file C:/Vitis_Proj/segment_1/failing_endpoints.rpt
+update_module_reference segment_bd_salsa_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+set_param general.maxThreads 8
+set_param synth.maxThreads 8
+report_ip_status -name ip_status 
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Vitis_Proj/segment_bd/segment_bd.bd]
+refresh_design
+report_timing -setup -slack_lesser_than 0 -max_paths 10000 -nworst 1 -file timing_summary.rpt
+pwd
+show_objects -name find_1 [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ ADVANCED.*.* } ]
+show_objects -name find_2 [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ BLOCKRAM.URAM.* } ]
+update_module_reference segment_bd_salsa_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+set_param general.maxThreads 8
+set_param synth.maxThreads 8
+get_param synth.maxThreads
+get_param general.maxThreads
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Vitis_Proj/segment_bd/segment_bd.bd]
+refresh_design
+close_design
+open_run impl_1
+report_timing -setup -slack_lesser_than 0 -max_paths 10000 -nworst 1 -file C:/Vitis_Proj/segment_1/failing_endpoints.rpt
+update_module_reference segment_bd_salsa_0_0
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+get_param synth.maxThreads
+get_param general.maxThreads
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Vitis_Proj/segment_bd/segment_bd.bd]
+refresh_design
+report_timing -setup -slack_lesser_than 0 -max_paths 10000 -nworst 1 -file C:/Vitis_Proj/segment_1/failing_endpoints.rpt
+set_property strategy Performance_ExtraTimingOpt [get_runs impl_1]
+phys_opt_design -directive AggressiveExplore
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+archive_project C:/gitrepos/salsa-fork/experiments/exp6.xpr.zip -temp_dir C:/Vitis_Proj/segment_1/.Xil/Vivado-7816-Asus -force -include_local_ip_cache

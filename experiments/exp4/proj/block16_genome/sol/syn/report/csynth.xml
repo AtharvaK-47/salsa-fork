@@ -1,0 +1,886 @@
+<profile>
+    <ReportVersion>
+        <Version>2026.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynquplus</ProductFamily>
+        <Part>xczu7ev-ffvc1156-2-e</Part>
+        <TopModelName>fenwick_top</TopModelName>
+        <TargetClockPeriod>3.33</TargetClockPeriod>
+        <ClockUncertainty>0.90</ClockUncertainty>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>loop auto-rewind stp (delay=0 cycle(s))</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>3.979</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>36</Best-caseLatency>
+            <Average-caseLatency>1700002</Average-caseLatency>
+            <Worst-caseLatency>3400002</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.143 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>6.764 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>13.529 ms</Worst-caseRealTimeLatency>
+            <Interval-min>35</Interval-min>
+            <Interval-max>3400001</Interval-max>
+            <PerformancePragma>-</PerformancePragma>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <ops>
+                <Slack>2.43</Slack>
+                <TripCount>
+                    <range>
+                        <min>1</min>
+                        <max>100000</max>
+                    </range>
+                </TripCount>
+                <isPerfectNested>0</isPerfectNested>
+                <Latency>
+                    <range>
+                        <min>34</min>
+                        <max>3400000</max>
+                    </range>
+                </Latency>
+                <AbsoluteTimeLatency>
+                    <range>
+                        <min>135</min>
+                        <max>13528600</max>
+                    </range>
+                </AbsoluteTimeLatency>
+                <PipelineII>34</PipelineII>
+                <PipelineDepth>35</PipelineDepth>
+                <PerformancePragma>-</PerformancePragma>
+                <InstanceList/>
+            </ops>
+        </SummaryOfLoopLatency>
+        <SummaryOfViolations>
+            <IssueType>Timing Violation</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>fenwick.cpp:16</SourceLocation>
+            <SummaryOfLoopViolations>
+                <ops>
+                    <Name>ops</Name>
+                    <IssueType>II Violation</IssueType>
+                    <ViolationType>Memory Dependency</ViolationType>
+                    <IterationDistance>1</IterationDistance>
+                    <SourceLocation>fenwick.cpp:16</SourceLocation>
+                </ops>
+            </SummaryOfLoopViolations>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>128</BRAM_18K>
+            <FF>6149</FF>
+            <LUT>13226</LUT>
+            <URAM>0</URAM>
+            <DSP>0</DSP>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>624</BRAM_18K>
+            <DSP>1728</DSP>
+            <FF>460800</FF>
+            <LUT>230400</LUT>
+            <URAM>96</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>fenwick_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>fenwick_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>fenwick_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>fenwick_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>fenwick_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>fenwick_top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>keys_address0</name>
+            <Object>keys</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>17</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>keys_ce0</name>
+            <Object>keys</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>keys_q0</name>
+            <Object>keys</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>kinds_address0</name>
+            <Object>kinds</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>17</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>kinds_ce0</name>
+            <Object>kinds</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>kinds_q0</name>
+            <Object>kinds</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vals_address0</name>
+            <Object>vals</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>17</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vals_ce0</name>
+            <Object>vals</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>vals_q0</name>
+            <Object>vals</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>res_address0</name>
+            <Object>res</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>17</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>res_ce0</name>
+            <Object>res</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>res_we0</name>
+            <Object>res</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>res_d0</name>
+            <Object>res</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>n</name>
+            <Object>n</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>fenwick_top</ModuleName>
+            <BindInstances>icmp_ln16_fu_5148_p2 add_ln16_fu_5154_p2 icmp_ln22_fu_5222_p2 icmp_ln36_fu_5228_p2 sparsemux_33_4_32_1_1_U2 add_ln38_fu_5234_p2 v_2_fu_5240_p2 acc_1_fu_5632_p3 icmp_ln36_1_fu_5280_p2 sparsemux_33_4_32_1_1_U3 acc_2_fu_5710_p2 add_ln38_1_fu_5286_p2 v_3_fu_5292_p2 acc_3_fu_5716_p3 icmp_ln36_2_fu_5368_p2 sparsemux_33_4_32_1_1_U4 acc_4_fu_5980_p2 add_ln38_2_fu_5373_p2 v_4_fu_5378_p2 acc_5_fu_5985_p3 icmp_ln36_3_fu_5417_p2 sparsemux_33_4_32_1_1_U5 acc_6_fu_6274_p2 add_ln38_3_fu_5423_p2 v_5_fu_5429_p2 acc_7_fu_6278_p3 icmp_ln36_4_fu_5742_p2 sparsemux_33_4_32_1_1_U7 acc_8_fu_6355_p2 add_ln38_4_fu_5747_p2 v_6_fu_5752_p2 acc_9_fu_6618_p3 icmp_ln36_5_fu_5791_p2 sparsemux_33_4_32_1_1_U8 acc_10_fu_6623_p2 add_ln38_5_fu_5797_p2 v_7_fu_5803_p2 acc_11_fu_6628_p3 icmp_ln36_6_fu_6081_p2 sparsemux_33_4_32_1_1_U9 acc_12_fu_6706_p2 add_ln38_6_fu_6086_p2 v_8_fu_6091_p2 acc_13_fu_6712_p3 icmp_ln36_7_fu_6130_p2 sparsemux_33_4_32_1_1_U10 acc_14_fu_7073_p2 add_ln38_7_fu_6136_p2 v_9_fu_6142_p2 acc_15_fu_7077_p3 icmp_ln36_8_fu_6451_p2 sparsemux_33_4_32_1_1_U11 acc_16_fu_7083_p2 add_ln38_8_fu_6456_p2 v_10_fu_6461_p2 acc_17_fu_7088_p3 icmp_ln36_9_fu_6500_p2 sparsemux_33_4_32_1_1_U13 acc_18_fu_7166_p2 add_ln38_9_fu_6506_p2 v_11_fu_6512_p2 acc_19_fu_7429_p3 icmp_ln36_10_fu_6880_p2 sparsemux_33_4_32_1_1_U14 acc_20_fu_7434_p2 add_ln38_10_fu_6885_p2 v_12_fu_6890_p2 acc_21_fu_7439_p3 icmp_ln36_11_fu_6929_p2 sparsemux_33_4_32_1_1_U15 acc_22_fu_7517_p2 add_ln38_11_fu_6935_p2 v_14_fu_6941_p2 acc_23_fu_7523_p3 icmp_ln36_12_fu_7262_p2 sparsemux_33_4_32_1_1_U16 acc_24_fu_7852_p2 add_ln38_12_fu_7267_p2 v_15_fu_7272_p2 acc_25_fu_7856_p3 icmp_ln36_13_fu_7311_p2 sparsemux_33_4_32_1_1_U17 acc_26_fu_7862_p2 add_ln38_13_fu_7317_p2 v_16_fu_7323_p2 acc_27_fu_7867_p3 icmp_ln36_14_fu_7691_p2 sparsemux_33_4_32_1_1_U19 acc_28_fu_7945_p2 add_ln38_14_fu_7696_p2 v_17_fu_7701_p2 acc_29_fu_8163_p3 icmp_ln36_15_fu_7951_p2 sparsemux_33_4_32_1_1_U20 acc_30_fu_8168_p2 add_ln38_15_fu_8027_p2 v_18_fu_8032_p2 acc_31_fu_8173_p3 icmp_ln36_16_fu_8071_p2 sparsemux_33_4_32_1_1_U21 acc_32_fu_8251_p2 acc_33_fu_8257_p3 sparsemux_33_4_32_1_1_U1 add_ln27_fu_5520_p2 sub_ln28_fu_5541_p2 and_ln28_fu_5546_p2 v_19_fu_5555_p2 icmp_ln26_fu_5861_p2 sparsemux_33_4_32_1_1_U6 add_ln27_1_fu_6233_p2 sub_ln28_1_fu_6254_p2 and_ln28_1_fu_6259_p2 v_21_fu_6268_p2 icmp_ln26_1_fu_6570_p2 sparsemux_33_4_32_1_1_U12 add_ln27_2_fu_7032_p2 sub_ln28_2_fu_7053_p2 and_ln28_2_fu_7058_p2 v_22_fu_7067_p2 icmp_ln26_2_fu_7381_p2 sparsemux_33_4_32_1_1_U18 add_ln27_3_fu_7811_p2 sub_ln28_3_fu_7832_p2 and_ln28_3_fu_7837_p2 v_23_fu_7846_p2 icmp_ln26_3_fu_8115_p2 sparsemux_33_4_32_1_1_U22 add_ln27_4_fu_8336_p2 sub_ln28_4_fu_8357_p2 and_ln28_4_fu_8362_p2 v_25_fu_8371_p2 icmp_ln26_4_fu_8415_p2 sparsemux_33_4_32_1_1_U23 add_ln27_5_fu_8534_p2 sub_ln28_5_fu_8555_p2 and_ln28_5_fu_8560_p2 v_27_fu_8569_p2 icmp_ln26_5_fu_8613_p2 sparsemux_33_4_32_1_1_U24 add_ln27_6_fu_8732_p2 sub_ln28_6_fu_8753_p2 and_ln28_6_fu_8758_p2 v_29_fu_8767_p2 icmp_ln26_6_fu_8811_p2 sparsemux_33_4_32_1_1_U25 add_ln27_7_fu_8930_p2 sub_ln28_7_fu_8951_p2 and_ln28_7_fu_8956_p2 v_31_fu_8965_p2 icmp_ln26_7_fu_9009_p2 sparsemux_33_4_32_1_1_U26 add_ln27_8_fu_9128_p2 sub_ln28_8_fu_9149_p2 and_ln28_8_fu_9154_p2 v_33_fu_9163_p2 icmp_ln26_8_fu_9207_p2 sparsemux_33_4_32_1_1_U27 add_ln27_9_fu_9326_p2 sub_ln28_9_fu_9347_p2 and_ln28_9_fu_9352_p2 v_35_fu_9361_p2 icmp_ln26_9_fu_9405_p2 sparsemux_33_4_32_1_1_U28 add_ln27_10_fu_9524_p2 sub_ln28_10_fu_9545_p2 and_ln28_10_fu_9550_p2 v_37_fu_9559_p2 icmp_ln26_10_fu_9603_p2 sparsemux_33_4_32_1_1_U29 add_ln27_11_fu_9722_p2 sub_ln28_11_fu_9743_p2 and_ln28_11_fu_9748_p2 v_39_fu_9757_p2 icmp_ln26_11_fu_9801_p2 sparsemux_33_4_32_1_1_U30 add_ln27_12_fu_9920_p2 sub_ln28_12_fu_9941_p2 and_ln28_12_fu_9946_p2 v_41_fu_9955_p2 icmp_ln26_12_fu_9999_p2 sparsemux_33_4_32_1_1_U31 add_ln27_13_fu_10118_p2 sub_ln28_13_fu_10139_p2 and_ln28_13_fu_10144_p2 v_43_fu_10153_p2 icmp_ln26_13_fu_10197_p2 sparsemux_33_4_32_1_1_U32 add_ln27_14_fu_10316_p2 sub_ln28_14_fu_10337_p2 and_ln28_14_fu_10342_p2 v_45_fu_10351_p2 icmp_ln26_14_fu_10395_p2 sparsemux_33_4_32_1_1_U33 add_ln27_15_fu_10514_p2 sub_ln28_15_fu_10535_p2 and_ln28_15_fu_10540_p2 v_47_fu_10549_p2 add_ln26_fu_10603_p2 icmp_ln26_15_fu_10609_p2 sparsemux_33_4_32_1_1_U34 add_ln27_16_fu_10720_p2 fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_9_U fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_8_U fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_7_U fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_6_U fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_5_U fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_4_U fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_3_U fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_2_U fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_1_U fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_U p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_10_U p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_11_U p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_12_U p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_13_U p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_14_U p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_15_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>fenwick_top</Name>
+            <Loops>
+                <ops/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>3.979</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>36</Best-caseLatency>
+                    <Average-caseLatency>1700002</Average-caseLatency>
+                    <Worst-caseLatency>3400002</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.143 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.764 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>13.529 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>35 ~ 3400001</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind stp (delay=0 cycle(s))</PipelineType>
+                    <PerformancePragma>-</PerformancePragma>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <ops>
+                        <Name>ops</Name>
+                        <Slack>2.43</Slack>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>100000</max>
+                            </range>
+                        </TripCount>
+                        <isPerfectNested>0</isPerfectNested>
+                        <Latency>34 ~ 3400000</Latency>
+                        <AbsoluteTimeLatency>0.135 us ~ 13.529 ms</AbsoluteTimeLatency>
+                        <PipelineII>34</PipelineII>
+                        <PipelineDepth>35</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <PerformancePragma>-</PerformancePragma>
+                        <InstanceList/>
+                    </ops>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>Timing Violation</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>fenwick.cpp:16</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <ops>
+                            <Name>ops</Name>
+                            <IssueType>II Violation</IssueType>
+                            <ViolationType>Memory Dependency</ViolationType>
+                            <IterationDistance>1</IterationDistance>
+                            <SourceLocation>fenwick.cpp:16</SourceLocation>
+                        </ops>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>128</BRAM_18K>
+                    <AVAIL_BRAM>624</AVAIL_BRAM>
+                    <UTIL_BRAM>20</UTIL_BRAM>
+                    <FF>6149</FF>
+                    <AVAIL_FF>460800</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>13226</LUT>
+                    <AVAIL_LUT>230400</AVAIL_LUT>
+                    <UTIL_LUT>5</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>96</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1728</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln16_fu_5148_p2" SOURCE="fenwick.cpp:16" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln16" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_fu_5154_p2" SOURCE="fenwick.cpp:16" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln16" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln22_fu_5222_p2" SOURCE="fenwick.cpp:22" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln22" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln36_fu_5228_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_fu_5234_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_2_fu_5240_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_1_fu_5632_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_1_fu_5280_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U3" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_2_fu_5710_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_1_fu_5286_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_3_fu_5292_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_3_fu_5716_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_2_fu_5368_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U4" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_4_fu_5980_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_2_fu_5373_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_4_fu_5378_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_5_fu_5985_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_3_fu_5417_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U5" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_6_fu_6274_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_6" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_3_fu_5423_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_5_fu_5429_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_7_fu_6278_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_4_fu_5742_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U7" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_8_fu_6355_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_8" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_4_fu_5747_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_6_fu_5752_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_9_fu_6618_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_5_fu_5791_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U8" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_10_fu_6623_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_10" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_5_fu_5797_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_5" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_7_fu_5803_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_11_fu_6628_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_6_fu_6081_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U9" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_12_fu_6706_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_12" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_6_fu_6086_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_6" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_8_fu_6091_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_13_fu_6712_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_13" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_7_fu_6130_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U10" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_s" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_14_fu_7073_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_14" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_7_fu_6136_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_7" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_9_fu_6142_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_15_fu_7077_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_15" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_8_fu_6451_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U11" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_16_fu_7083_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_16" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_8_fu_6456_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_8" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_10_fu_6461_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_17_fu_7088_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_17" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_9_fu_6500_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U13" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_18_fu_7166_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_18" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_9_fu_6506_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_9" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_11_fu_6512_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_19_fu_7429_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_19" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_10_fu_6880_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U14" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_12" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_20_fu_7434_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_20" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_10_fu_6885_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_10" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_12_fu_6890_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_12" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_21_fu_7439_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_21" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_11_fu_6929_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U15" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_14" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_22_fu_7517_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_22" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_11_fu_6935_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_11" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_14_fu_6941_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_14" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_23_fu_7523_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_23" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_12_fu_7262_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_12" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U16" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_15" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_24_fu_7852_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_24" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_12_fu_7267_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_12" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_15_fu_7272_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_15" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_25_fu_7856_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_25" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_13_fu_7311_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_13" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U17" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_17" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_26_fu_7862_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_26" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_13_fu_7317_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_13" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_16_fu_7323_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_16" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_27_fu_7867_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_27" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_14_fu_7691_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_14" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U19" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_18" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_28_fu_7945_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_28" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_14_fu_7696_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_14" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_17_fu_7701_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_17" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_29_fu_8163_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_29" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_15_fu_7951_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_15" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U20" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_19" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_30_fu_8168_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_30" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln38_15_fu_8027_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln38_15" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="v_18_fu_8032_p2" SOURCE="fenwick.cpp:38" STORAGESUBTYPE="" URAM="0" VARIABLE="v_18" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_31_fu_8173_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_31" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln36_16_fu_8071_p2" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln36_16" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U21" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_21" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="acc_32_fu_8251_p2" SOURCE="fenwick.cpp:37" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_32" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="ops" OPTYPE="select" PRAGMA="" RTLNAME="acc_33_fu_8257_p3" SOURCE="fenwick.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="acc_33" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U1" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_fu_5520_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_fu_5541_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_fu_5546_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_19_fu_5555_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_19" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_fu_5861_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U6" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_1_fu_6233_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_1_fu_6254_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_1_fu_6259_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_21_fu_6268_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_21" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_1_fu_6570_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U12" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_2_fu_7032_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_2_fu_7053_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_2_fu_7058_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_22_fu_7067_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_22" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_2_fu_7381_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U18" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_3_fu_7811_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_3_fu_7832_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_3_fu_7837_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_23_fu_7846_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_23" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_3_fu_8115_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U22" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_13" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_4_fu_8336_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_4_fu_8357_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_4_fu_8362_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_25_fu_8371_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_25" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_4_fu_8415_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U23" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_16" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_5_fu_8534_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_5" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_5_fu_8555_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_5" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_5_fu_8560_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_27_fu_8569_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_27" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_5_fu_8613_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U24" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_20" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_6_fu_8732_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_6" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_6_fu_8753_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_6" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_6_fu_8758_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_29_fu_8767_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_29" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_6_fu_8811_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U25" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_22" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_7_fu_8930_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_7" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_7_fu_8951_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_7" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_7_fu_8956_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_31_fu_8965_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_31" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_7_fu_9009_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U26" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_23" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_8_fu_9128_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_8" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_8_fu_9149_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_8" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_8_fu_9154_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_33_fu_9163_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_33" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_8_fu_9207_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U27" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_24" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_9_fu_9326_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_9" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_9_fu_9347_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_9" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_9_fu_9352_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_35_fu_9361_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_35" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_9_fu_9405_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U28" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_25" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_10_fu_9524_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_10" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_10_fu_9545_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_10" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_10_fu_9550_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_37_fu_9559_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_37" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_10_fu_9603_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U29" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_26" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_11_fu_9722_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_11" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_11_fu_9743_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_11" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_11_fu_9748_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_39_fu_9757_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_39" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_11_fu_9801_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U30" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_27" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_12_fu_9920_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_12" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_12_fu_9941_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_12" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_12_fu_9946_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_12" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_41_fu_9955_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_41" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_12_fu_9999_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_12" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U31" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_28" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_13_fu_10118_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_13" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_13_fu_10139_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_13" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_13_fu_10144_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_13" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_43_fu_10153_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_43" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_13_fu_10197_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_13" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U32" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_29" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_14_fu_10316_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_14" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_14_fu_10337_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_14" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_14_fu_10342_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_14" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_45_fu_10351_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_45" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln26_14_fu_10395_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_14" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U33" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_30" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_15_fu_10514_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_15" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_15_fu_10535_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln28_15" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="and" PRAGMA="" RTLNAME="and_ln28_15_fu_10540_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln28_15" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="v_47_fu_10549_p2" SOURCE="fenwick.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="v_47" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln26_fu_10603_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln26" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="ops" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln26_15_fu_10609_p2" SOURCE="fenwick.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln26_15" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="ops" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_33_4_32_1_1_U34" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_31" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" CE_REG="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ops" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_16_fu_10720_p2" SOURCE="fenwick.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_16" VISIBLE="true"/>
+                <BindNode BINDID="8589934598" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_9_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_9" VISIBLE="true"/>
+                <BindNode BINDID="8589934599" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_8_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_8" VISIBLE="true"/>
+                <BindNode BINDID="8589934600" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_7_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_7" VISIBLE="true"/>
+                <BindNode BINDID="8589934601" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_6_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_6" VISIBLE="true"/>
+                <BindNode BINDID="8589934602" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_5_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_5" VISIBLE="true"/>
+                <BindNode BINDID="8589934603" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_4_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_4" VISIBLE="true"/>
+                <BindNode BINDID="8589934604" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_3_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_3" VISIBLE="true"/>
+                <BindNode BINDID="8589934605" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_2_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_2" VISIBLE="true"/>
+                <BindNode BINDID="8589934606" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_1_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_1" VISIBLE="true"/>
+                <BindNode BINDID="8589934607" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="fenwick_top_unsigned_short_const_unsigned_char_const_int_const_int_int_t" VISIBLE="true"/>
+                <BindNode BINDID="8589934608" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_10_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_10" VISIBLE="true"/>
+                <BindNode BINDID="8589934609" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_11_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_11" VISIBLE="true"/>
+                <BindNode BINDID="8589934610" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_12_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_12" VISIBLE="true"/>
+                <BindNode BINDID="8589934611" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_13_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_13" VISIBLE="true"/>
+                <BindNode BINDID="8589934612" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_14_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_14" VISIBLE="true"/>
+                <BindNode BINDID="8589934613" BINDTYPE="storage" BRAM="8" BUNDLEDNAME="" CE_REG="N" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_15_U" SOURCE="" STORAGESIZE="32 4096 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="p_ZZ11fenwick_topPKtPKhPKiPiiE4tree_15" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_interface m_axi_alignment_size="1"/>
+        <config_rtl auto_prefix="1"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="keys" index="0" direction="in" srcType="unsigned short const *" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="keys_address0" name="keys_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="keys_ce0" name="keys_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="keys_q0" name="keys_q0" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="kinds" index="1" direction="in" srcType="unsigned char const *" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="kinds_address0" name="kinds_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="kinds_ce0" name="kinds_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="kinds_q0" name="kinds_q0" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="vals" index="2" direction="in" srcType="int const *" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="vals_address0" name="vals_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="vals_ce0" name="vals_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="vals_q0" name="vals_q0" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="res" index="3" direction="out" srcType="int*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="res_address0" name="res_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="res_ce0" name="res_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="res_we0" name="res_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="res_d0" name="res_d0" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="n" index="4" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="n" name="n" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="keys_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="17">
+            <portMaps>
+                <portMap portMapName="keys_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>keys_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="keys"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="keys_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="keys_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>keys_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="keys"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="kinds_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="17">
+            <portMaps>
+                <portMap portMapName="kinds_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>kinds_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="kinds"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="kinds_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="kinds_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>kinds_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="kinds"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vals_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="17">
+            <portMaps>
+                <portMap portMapName="vals_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vals_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vals"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="vals_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="vals_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>vals_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="vals"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="res_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="17">
+            <portMaps>
+                <portMap portMapName="res_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>res_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="res"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="res_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="res_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>res_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="res"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="n" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="n">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>n</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="n"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_MEMORY">
+                <table>
+                    <keys size="3">Port, Direction, Bitwidth</keys>
+                    <column name="keys_address0">out, 17</column>
+                    <column name="keys_q0">in, 16</column>
+                    <column name="kinds_address0">out, 17</column>
+                    <column name="kinds_q0">in, 8</column>
+                    <column name="res_address0">out, 17</column>
+                    <column name="res_d0">out, 32</column>
+                    <column name="vals_address0">out, 17</column>
+                    <column name="vals_q0">in, 32</column>
+                </table>
+            </item>
+            <item name="Other Ports">
+                <table>
+                    <keys size="4">Port, Mode, Direction, Bitwidth</keys>
+                    <column name="n">ap_none, in, 32</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="keys">in, unsigned short const *</column>
+                    <column name="kinds">in, unsigned char const *</column>
+                    <column name="vals">in, int const *</column>
+                    <column name="res">out, int*</column>
+                    <column name="n">in, int</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="4">Argument, HW Interface, HW Type, HW Usage</keys>
+                    <column name="keys">keys_address0, port, offset</column>
+                    <column name="keys">keys_ce0, port, </column>
+                    <column name="keys">keys_q0, port, </column>
+                    <column name="kinds">kinds_address0, port, offset</column>
+                    <column name="kinds">kinds_ce0, port, </column>
+                    <column name="kinds">kinds_q0, port, </column>
+                    <column name="vals">vals_address0, port, offset</column>
+                    <column name="vals">vals_ce0, port, </column>
+                    <column name="vals">vals_q0, port, </column>
+                    <column name="res">res_address0, port, offset</column>
+                    <column name="res">res_ce0, port, </column>
+                    <column name="res">res_we0, port, </column>
+                    <column name="res">res_d0, port, </column>
+                    <column name="n">n, port, </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <PragmaReport>
+        <Pragma type="array_partition" status="valid" location="fenwick.cpp:9" parentFunction="fenwick_top" variable="tree" isDirective="0" options="variable=tree type=block factor=16 dim=1"/>
+        <Pragma type="pipeline" status="valid" location="fenwick.cpp:17" parentFunction="fenwick_top" variable="" isDirective="0" options="ii=1"/>
+        <Pragma type="loop_tripcount" status="valid" location="fenwick.cpp:18" parentFunction="fenwick_top" variable="" isDirective="0" options="min=1 max=100000"/>
+        <Pragma type="unroll" status="invalid" location="fenwick.cpp:25" parentFunction="fenwick_top" variable="" isDirective="0" options="">
+            <Msg msg_id="" msg_severity="ERROR" msg_body="Not implemented"/>
+        </Pragma>
+        <Pragma type="unroll" status="invalid" location="fenwick.cpp:35" parentFunction="fenwick_top" variable="" isDirective="0" options="">
+            <Msg msg_id="" msg_severity="ERROR" msg_body="Not implemented"/>
+        </Pragma>
+        <Pragma type="array_partition" status="implemented" location="fenwick.cpp:9" parentFunction="fenwick_top" variable="fenwick_top(unsigned" isDirective="0" options="dim=1 type=block factor=16 variable=fenwick_top(unsigned short const*, unsigned char const*, int const*, int*, int)::tree"/>
+        <Pragma type="loop_tripcount" status="implemented" location="fenwick.cpp:18" parentFunction="fenwick_top" variable="" isDirective="0" options="max=100000 min=1 avg=50000"/>
+    </PragmaReport>
+</profile>

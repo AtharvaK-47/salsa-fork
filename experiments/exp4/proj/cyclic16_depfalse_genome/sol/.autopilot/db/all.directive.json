@@ -1,0 +1,24 @@
+[
+  {
+    "csim": false,
+    "functionLabel": "",
+    "functionName": "fenwick_top",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "fenwick_top"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/gitrepos/salsa-fork/experiments/exp4/run_hls.tcl",
+    "sourceLine": 56,
+    "success": true
+  }
+]

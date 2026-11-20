@@ -1,0 +1,6 @@
+<pragmas>
+<pragma file="fenwick.cpp" line="17" pragmaType="pipeline" parentfunction="fenwick_top" off="0" ii="1" rewind="0" style=""/>
+<pragma file="fenwick.cpp" line="18" pragmaType="loop_tripcount" parentfunction="fenwick_top" min="1" max="100000" avg="50000"/>
+<pragma file="fenwick.cpp" line="35" pragmaType="unroll" parentfunction="fenwick_top" factor="-1" skip_exit_check="0"/>
+<pragma file="fenwick.cpp" line="25" pragmaType="unroll" parentfunction="fenwick_top" factor="-1" skip_exit_check="0"/>
+</pragmas>

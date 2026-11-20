@@ -1,0 +1,29 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/gitrepos/salsa-fork/experiments/exp4/run_hls.tcl:56:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="fenwick_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=fenwick_top" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="fenwick.cpp:17:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fenwick_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="fenwick.cpp:18:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fenwick_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=100000" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="fenwick.cpp:25:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fenwick_top" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="fenwick.cpp:35:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="fenwick_top" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="fenwick.cpp:34:13" msg_body="Loop 'down' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="down"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="fenwick.cpp:24:13" msg_body="Loop 'up' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="up"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fenwick.cpp:4:0" msg_body="Unrolling loop 'down' (fenwick.cpp:34:13) in function 'fenwick_top' completely with a factor of 17">
+        <args Factor="17" LoopLoc="fenwick.cpp:34:13" LoopName="down"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fenwick.cpp:4:0" msg_body="Unrolling loop 'up' (fenwick.cpp:24:13) in function 'fenwick_top' completely with a factor of 17">
+        <args Factor="17" LoopLoc="fenwick.cpp:24:13" LoopName="up"/>
+    </msg>
+</xilinx:hls_fe_msgs>

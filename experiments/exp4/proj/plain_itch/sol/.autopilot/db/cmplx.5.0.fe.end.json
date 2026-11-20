@@ -1,0 +1,27 @@
+{
+    "0": {
+        "name": "fenwick_top",
+        "file": "fenwick.cpp",
+        "fileloc": "3",
+        "instructions": "437",
+        "total_instructions": "437",
+        "calls": "",
+        "basicblocks": "56",
+        "memory_accesses": "58",
+        "control_depth": "4",
+        "def_use_depth": "32",
+        "loads": {
+            "G": "34",
+            "L": "1",
+            "T": "3"
+        },
+        "stores": {
+            "G": "17",
+            "L": "2",
+            "T": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

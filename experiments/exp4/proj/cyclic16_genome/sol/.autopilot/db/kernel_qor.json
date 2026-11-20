@@ -1,0 +1,30 @@
+{
+    "name": "fenwick_top",
+    "type": "function",
+    "pipelined": "yes",
+    "dataflowed": "no",
+    "original_ti": 3400001,
+    "original_tl": 3400002,
+    "calculated_ti": -1,
+    "calculated_tl": -1,
+    "assume_ti": -1,
+    "assume_tl": -1,
+    "CIs": [],
+    "loops": [
+        {
+            "name": "ops",
+            "type": "loop",
+            "trip_count": 100000,
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 3400000,
+            "original_tl": 3400001,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": []
+        }
+    ]
+}
