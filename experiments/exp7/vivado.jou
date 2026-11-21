@@ -1,0 +1,94 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sat Nov 21 12:56:28 2026
+# Process ID         : 35648
+# Current directory  : C:/Users/Athar/AppData/Roaming/Xilinx/Vivado
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent20212
+# Log file           : C:/Users/Athar/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file       : C:/Users/Athar/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Running On         : Asus
+# Platform           : Windows 11
+# Operating System   : 26300
+# Processor Detail   : AMD Ryzen AI 9 HX 370 w/ Radeon 890M           
+# CPU Frequency      : 2000 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 24
+# Host memory        : 16233 MB
+# Swap memory        : 40802 MB
+# Total Virtual      : 57036 MB
+# Available Virtual  : 32864 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Vitis_Proj/segment_1/segment_1.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_project
+create_project dual C:/Vitis_Proj/dual/dual -part xczu7ev-ffvc1156-2-e
+add_files -norecurse {C:/Vitis_Proj/dual/salsa.sv C:/Vitis_Proj/dual/salsa_fenwick_pull.sv}
+close_project
+create_project dual C:/Vitis_Proj/dual -part xczu7ev-ffvc1156-2-e
+add_files -norecurse {C:/Vitis_Proj/dual/salsa.sv C:/Vitis_Proj/dual/salsa_fenwick_pull.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Vitis_Proj/dual/tb_dual.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+get_param synth.maxThreads
+get_param general.maxThreads
+open_run impl_1
+report_methodology -file methodology.rpt
+report_clocks -file clocks.rpt
+report_exceptions -file exceptions.rpt
+set_property flow {Vivado RQS Implementation 2026} [get_runs impl_1]
+file mkdir C:/Vitis_Proj/dual/dual.srcs/constrs_1
+file mkdir C:/Vitis_Proj/dual/dual.srcs/constrs_1/new
+close [ open C:/Vitis_Proj/dual/dual.srcs/constrs_1/new/timing.xdc w ]
+add_files -fileset constrs_1 C:/Vitis_Proj/dual/dual.srcs/constrs_1/new/timing.xdc
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+close_design
+open_run impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+puts "ACTIVE CONSTRAINT SET:"
+current_fileset -constrset
+puts "XDC FILES:"
+get_files -of_objects [get_filesets constrs_1] *.xdc
+report_clocks
+get_ports
+set fp [open [get_property NAME $xdc] r]
+set xdc [get_files C:/Vitis_Proj/dual/dual.srcs/constrs_1/new/timing.xdc]
+puts "Enabled: [get_property IS_ENABLED $xdc]"
+puts "Used in: [get_property USED_IN $xdc]"
+set xdc_path "C:/Vitis_Proj/dual/dual.srcs/constrs_1/new/timing.xdc"
+set fp [open $xdc_path w]
+puts $fp {create_clock -name aclk -period 5.000 [get_ports aclk]}
+close $fp
+puts [read [set fp [open $xdc_path r]]]
+close $fp
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+close_design
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+close_design
+open_run impl_1
+archive_project C:/Vitis_Proj/dual.xpr.zip -temp_dir C:/Users/Athar/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-35648-Asus -force -include_local_ip_cache
